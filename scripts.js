@@ -18,17 +18,17 @@ function hobbyfunction () {
 
 //challenge 2 
 
-const add = (a, b) => { a + b }
+const add = (a, b) =>   a + b 
 
-const multiply = (a, b) => { a * b }
+const multiply = (a, b) =>  a * b 
 
 function internal() {
-	const added = this.add(this.a, this.b)
-	this.multiply(this.a, this.b)
-	return this
-}
+const added = this.add(this.internal.a, this.internal.b)
+const multiplied = this.multiply(this.internal.a, this.internal.b)
+return multiplied*added
 
-// Not allowed to change below this
+}
+//Not allowed to change below this
 
 const example1 = {
 	internal: {
@@ -52,5 +52,5 @@ const example2 = {
   calculate: internal
 }
 
-consol.log(example1.calculate())
+console.log(example1.calculate())
 console.log(example2.calculate())
